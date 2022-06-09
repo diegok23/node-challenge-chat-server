@@ -1,0 +1,79 @@
+[
+  {
+    "id": 0,
+    "from": "Diego",
+    "text": "First message!"
+  },
+  {
+    "from": "Diego",
+    "text": "Hola A tothom!!!",
+    "timeSent": "2022-06-09T21:55:53.175Z",
+    "id": 1
+  },
+  {
+    "from": "Diego",
+    "text": "Mensaje de pruebas",
+    "timeSent": "2022-06-09T21:56:07.627Z",
+    "id": 2
+  },
+  {
+    "from": "Diego",
+    "text": "Mensaje de pruebas Nº 2",
+    "timeSent": "2022-06-09T21:56:19.372Z",
+    "id": 3
+  },
+  {
+    "from": "DiegoK",
+    "text": "Otro mensaje de pruebas",
+    "timeSent": "2022-06-09T21:56:40.571Z",
+    "id": 4
+  },
+  {
+    "from": "DiegoIK",
+    "text": "Otro mensaje de pruebas otra vez",
+    "timeSent": "2022-06-09T21:56:51.977Z",
+    "id": 5
+  },
+  {
+    "from": "Ivan",
+    "text": "Yes!!!!",
+    "timeSent": "2022-06-09T21:57:51.297Z",
+    "id": 7
+  },
+  {
+    "from": "Ivan",
+    "text": "I'm typing code at night in the balcony",
+    "timeSent": "2022-06-09T21:58:30.607Z",
+    "id": 8
+  },
+  {
+    "from": "Diego",
+    "text": "Prueba en JSON",
+    "timeSent": "2022-06-09T21:58:45.781Z",
+    "id": 9
+  },
+  {
+    "from": "Diego",
+    "text": "JSON correcto",
+    "timeSent": "2022-06-09T21:58:58.144Z",
+    "id": 10
+  },
+  {
+    "from": "Diego",
+    "text": "Van 10 mensajes",
+    "timeSent": "2022-06-09T21:59:16.726Z",
+    "id": 11
+  },
+  {
+    "from": "Diego",
+    "text": "En breve puedo probar el endpoint de los últimos 10",
+    "timeSent": "2022-06-09T22:00:06.350Z",
+    "id": 12
+  },
+  {
+    "from": "Diego",
+    "text": "Aunque ya se que funciona",
+    "timeSent": "2022-06-09T22:00:17.046Z",
+    "id": 13
+  }
+]
