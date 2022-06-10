@@ -75,8 +75,9 @@ const postMessage = (req, res) => {
   const messages = getMessages();
   if (req.body.text.length > 0 && req.body.from.length > 0) {
     const newMessage = req.body;
+    const lastMessageId = Number(messages[messages.length - 1].id);
     newMessage.timeSent = new Date(); // LEVEL 4
-    newMessage.id = messages.length;
+    newMessage.id = lastMessageId + 1;
     messages.push(newMessage);
     saveMessages(messages);
     res.send('Your message has been sent!');
@@ -91,21 +92,36 @@ const putMessageUpdate = (req, res) => {
   const messages = getMessages();
   const id = Number(req.params.messageId);
   const message = messages.find((message) => message.id === id);
-  message.text = req.body.text;
-  message.from = req.body.from;
-  saveMessages(messages);
-  res.send('Your message has been modified!');
+  if (message) {
+    message.text = req.body.text;
+    message.from = req.body.from;
+    saveMessages(messages);
+    res.send({
+      status: 'Your message has been modified!',
+      data: message
+    });
+  } else {
+    res.status(400);
+    res.send('Your message has not been modified!');
+  }
 };
 
 const deleteMessage = (req, res) => {
   let messages = getMessages();
   const id = Number(req.params.messageId);
-  const dmessage = messages.find((message) => message.id === id);
-  messages = messages.filter((message) => message.id !== id);
-  saveMessages(messages);
-  res.send('Your message has been deleted!');
+  const deletedMessage = messages.find((message) => message.id === id);
+  if (deletedMessage) {
+    messages = messages.filter((message) => message.id !== id);
+    saveMessages(messages);
+    res.send({
+      status: 'Your message has been deleted!',
+      data: deletedMessage
+    });
+  } else {
+    res.status(400);
+    res.send('Your message has not been deleted!');
+  }
 };
-
 //
 
 app.use(myLogger);
