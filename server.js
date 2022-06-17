@@ -73,7 +73,7 @@ const getMessagesLatest = (req, res) => {
 // LEVELS 1 y 2
 const postMessage = (req, res) => {
   const messages = getMessages();
-  if (req.body.text.length > 0 && req.body.from.length > 0) {
+  if (req.body.text && req.body.from) {
     const newMessage = req.body;
     const lastMessageId = Number(messages[messages.length - 1].id);
     newMessage.timeSent = new Date(); // LEVEL 4
