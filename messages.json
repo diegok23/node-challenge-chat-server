@@ -1,8 +1,8 @@
 [
   {
-    "id": 0,
     "from": "Diego",
-    "text": "First message!"
+    "text": "First message!",
+    "id": 0
   },
   {
     "from": "Diego",
